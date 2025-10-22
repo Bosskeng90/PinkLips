@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Pink Lips</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pink: {
+                            500: '#ec4899',
+                            600: '#db2777',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-pink-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-2 cursor-pointer" onclick="window.location.href='index.html'">
+                    <i class="fas fa-headphones text-gray-600 text-xl"></i>
+                    <span class="text-xl font-bold">Pink <span class="text-pink-600">Lips</span></span>
+                </div>
+                <ul class="hidden md:flex items-center space-x-8">
+                    <li><a href="index.html" class="text-gray-600 hover:text-pink-600 transition">Home</a></li>
+                    <li><a href="dresses.html" class="text-gray-600 hover:text-pink-600 transition">Dresses</a></li>
+                    <li><a href="categories.html" class="text-gray-600 hover:text-pink-600 transition">Categories</a></li>
+                    <li><a href="redeem.html" class="text-gray-600 hover:text-pink-600 transition">Redeem</a></li>
+                    <li><a href="about.html" class="text-pink-600 font-medium border-b-2 border-pink-600 pb-1">About</a></li>
+                    <li><a href="contact.html" class="text-gray-600 hover:text-pink-600 transition">Contact</a></li>
+                </ul>
+                <div class="flex items-center space-x-4">
+                    <button class="text-gray-600 hover:text-pink-600 transition"><i class="fas fa-search"></i></button>
+                    <button onclick="window.location.href='cart.html'" class="text-gray-600 hover:text-pink-600 transition"><i class="fas fa-shopping-bag"></i></button>
+                    <button class="text-gray-600 hover:text-pink-600 transition" onclick="window.location.href='login.html'"><i class="fas fa-user"></i></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Hero Section -->
+    <section class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900">About Pink Lips</h1>
+                    <p class="text-lg text-gray-600 leading-relaxed">Founded with a passion for empowering women through fashion, Pink Lips has been creating stunning dresses that make every woman feel confident and beautiful. Our mission is to provide high-quality, stylish dresses that celebrate femininity and elegance.</p>
+                    <p class="text-lg text-gray-600 leading-relaxed">From casual everyday wear to show-stopping evening gowns, we believe that every woman deserves to feel extraordinary in what she wears. Our carefully curated collection features both timeless classics and contemporary trends.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <button class="bg-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-pink-700 transition">Our Story</button>
+                        <button class="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:border-pink-600 hover:text-pink-600 transition">Size Guide</button>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=800&h=600&fit=crop" alt="Fashion Store Interior" class="rounded-2xl shadow-2xl w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-16 bg-gradient-to-b from-pink-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">Why Choose Pink Lips?</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition text-center">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-pink-100 rounded-full mb-4">
+                        <i class="fas fa-heart text-3xl text-pink-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Handpicked Quality</h3>
+                    <p class="text-gray-600">Every dress is carefully selected for quality, style, and craftsmanship to ensure you get the best.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition text-center">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-pink-100 rounded-full mb-4">
+                        <i class="fas fa-truck text-3xl text-pink-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Free Shipping</h3>
+                    <p class="text-gray-600">Complimentary shipping on orders over $150. Fast and reliable delivery to your doorstep.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition text-center">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-pink-100 rounded-full mb-4">
+                        <i class="fas fa-shield-alt text-3xl text-pink-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">30-Day Returns</h3>
+                    <p class="text-gray-600">Easy returns and exchanges within 30 days. Your satisfaction is our priority.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition text-center">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-pink-100 rounded-full mb-4">
+                        <i class="fas fa-user-tie text-3xl text-pink-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Expert Styling</h3>
+                    <p class="text-gray-600">Professional styling advice from our fashion experts to help you find your perfect look.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-gradient-to-r from-pink-600 to-purple-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <h3 class="text-5xl font-bold mb-2">500+</h3>
+                    <p class="text-pink-100 text-lg">Unique Styles</p>
+                </div>
+                <div>
+                    <h3 class="text-5xl font-bold mb-2">10,000+</h3>
+                    <p class="text-pink-100 text-lg">Happy Customers</p>
+                </div>
+                <div>
+                    <h3 class="text-5xl font-bold mb-2 flex items-center justify-center gap-2">4.9<i class="fas fa-star text-3xl"></i></h3>
+                    <p class="text-pink-100 text-lg">Average Rating</p>
+                </div>
+                <div>
+                    <h3 class="text-5xl font-bold mb-2">50+</h3>
+                    <p class="text-pink-100 text-lg">Countries Served</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h4 class="text-xl font-bold mb-4">About Pink Lips</h4>
+                    <p class="text-gray-400">Empowering women through fashion with elegant dresses that celebrate femininity and style.</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-pink-500 transition">About Us</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-pink-500 transition">Contact</a></li>
+                        <li><a href="redeem.html" class="text-gray-400 hover:text-pink-500 transition">Redeem Code</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-500 transition">Size Guide</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-500 transition">Shipping Info</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Follow Us</h4>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-600 transition"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-600 transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-600 transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-600 transition"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 Pink Lips. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/cart.js"></script>
+    <script src="js/wishlist.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

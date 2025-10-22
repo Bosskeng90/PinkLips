@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dresses - Pink Lips</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pink: {
+                            500: '#ec4899',
+                            600: '#db2777',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-pink-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-2 cursor-pointer" onclick="window.location.href='index.html'">
+                    <i class="fas fa-headphones text-gray-600 text-xl"></i>
+                    <span class="text-xl font-bold">Pink <span class="text-pink-600">Lips</span></span>
+                </div>
+                <ul class="hidden md:flex items-center space-x-8">
+                    <li><a href="index.html" class="text-gray-600 hover:text-pink-600 transition">Home</a></li>
+                    <li><a href="dresses.html" class="text-pink-600 font-medium border-b-2 border-pink-600 pb-1">Dresses</a></li>
+                    <li><a href="categories.html" class="text-gray-600 hover:text-pink-600 transition">Categories</a></li>
+                    <li><a href="redeem.html" class="text-gray-600 hover:text-pink-600 transition">Redeem</a></li>
+                    <li><a href="about.html" class="text-gray-600 hover:text-pink-600 transition">About</a></li>
+                    <li><a href="contact.html" class="text-gray-600 hover:text-pink-600 transition">Contact</a></li>
+                </ul>
+                <div class="flex items-center space-x-4">
+                    <button class="text-gray-600 hover:text-pink-600 transition"><i class="fas fa-search"></i></button>
+                    <button onclick="window.location.href='cart.html'" class="text-gray-600 hover:text-pink-600 transition"><i class="fas fa-shopping-bag"></i></button>
+                    <button class="text-gray-600 hover:text-pink-600 transition" onclick="window.location.href='login.html'"><i class="fas fa-user"></i></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bg-gradient-to-r from-pink-600 to-purple-600 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Featured Collection</h1>
+            <p class="text-xl text-pink-100 max-w-3xl mx-auto">Handpicked pieces that define elegance and style. Each dress is carefully selected to make you look and feel extraordinary.</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product Card 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-2xl transition-shadow duration-300">
+                    <div class="relative overflow-hidden">
+                        <div class="absolute top-3 left-3 z-10 flex gap-2">
+                            <span class="bg-pink-600 text-white text-xs font-bold px-3 py-1 rounded-full">New</span>
+                            <span class="bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full">Sale</span>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=500&h=600&fit=crop" alt="Elegant Evening Dress" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <button onclick="toggleWishlistFromCard('dress-001', this)" data-wishlist-id="dress-001" class="absolute top-3 right-3 bg-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-pink-600 hover:text-white transition"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex items-center gap-2 text-sm mb-2">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <span class="font-semibold">4.8</span>
+                            <span class="text-gray-500">(124)</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Elegant Evening Dress</h3>
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="text-2xl font-bold text-pink-600">₱299</span>
+                            <span class="text-gray-400 line-through">₱399</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <button onclick="showNotification('Product details coming soon!', 'info')" class="border-2 border-gray-300 text-gray-700 py-2 rounded-lg hover:border-pink-600 hover:text-pink-600 transition font-semibold">View Details</button>
+                            <button onclick="addToCartFromCard('dress-001')" data-product-id="dress-001" class="bg-pink-600 text-white py-2 rounded-lg hover:bg-pink-700 transition font-semibold">Add to Bag</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-2xl transition-shadow duration-300">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=500&h=600&fit=crop" alt="Summer Floral Midi" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <button onclick="toggleWishlistFromCard('dress-002', this)" data-wishlist-id="dress-002" class="absolute top-3 right-3 bg-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-pink-600 hover:text-white transition"><i class="far fa-heart"></i></button>
+                        <button onclick="addToCartFromCard('dress-002')" data-product-id="dress-002" class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-pink-600 text-white px-6 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-2 font-semibold">
+                            <i class="fas fa-shopping-bag"></i>
+                            Quick Add
+                        </button>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex items-center gap-2 text-sm mb-2">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <span class="font-semibold">4.9</span>
+                            <span class="text-gray-500">(89)</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Summer Floral Midi</h3>
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="text-2xl font-bold text-pink-600">₱159</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <button onclick="showNotification('Product details coming soon!', 'info')" class="border-2 border-gray-300 text-gray-700 py-2 rounded-lg hover:border-pink-600 hover:text-pink-600 transition font-semibold">View Details</button>
+                            <button onclick="addToCartFromCard('dress-002')" data-product-id="dress-002" class="bg-pink-600 text-white py-2 rounded-lg hover:bg-pink-700 transition font-semibold">Add to Bag</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-2xl transition-shadow duration-300">
+                    <div class="relative overflow-hidden">
+                        <div class="absolute top-3 left-3 z-10">
+                            <span class="bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full">Sale</span>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?w=500&h=600&fit=crop" alt="Classic Black Dress" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <button onclick="toggleWishlistFromCard('dress-003', this)" data-wishlist-id="dress-003" class="absolute top-3 right-3 bg-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-pink-600 hover:text-white transition"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex items-center gap-2 text-sm mb-2">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <span class="font-semibold">4.7</span>
+                            <span class="text-gray-500">(203)</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Classic Black Dress</h3>
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="text-2xl font-bold text-pink-600">₱199</span>
+                            <span class="text-gray-400 line-through">₱249</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <button onclick="showNotification('Product details coming soon!', 'info')" class="border-2 border-gray-300 text-gray-700 py-2 rounded-lg hover:border-pink-600 hover:text-pink-600 transition font-semibold">View Details</button>
+                            <button onclick="addToCartFromCard('dress-003')" data-product-id="dress-003" class="bg-pink-600 text-white py-2 rounded-lg hover:bg-pink-700 transition font-semibold">Add to Bag</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-2xl transition-shadow duration-300">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=500&h=600&fit=crop" alt="Casual Day Dress" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <button onclick="toggleWishlistFromCard('dress-004', this)" data-wishlist-id="dress-004" class="absolute top-3 right-3 bg-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-pink-600 hover:text-white transition"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex items-center gap-2 text-sm mb-2">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <span class="font-semibold">4.6</span>
+                            <span class="text-gray-500">(156)</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Casual Day Dress</h3>
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="text-2xl font-bold text-pink-600">₱129</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <button onclick="showNotification('Product details coming soon!', 'info')" class="border-2 border-gray-300 text-gray-700 py-2 rounded-lg hover:border-pink-600 hover:text-pink-600 transition font-semibold">View Details</button>
+                            <button onclick="addToCartFromCard('dress-004')" data-product-id="dress-004" class="bg-pink-600 text-white py-2 rounded-lg hover:bg-pink-700 transition font-semibold">Add to Bag</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 5 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-2xl transition-shadow duration-300">
+                    <div class="relative overflow-hidden">
+                        <div class="absolute top-3 left-3 z-10">
+                            <span class="bg-pink-600 text-white text-xs font-bold px-3 py-1 rounded-full">New</span>
+                        </div>
+                        <img src="https://i.pinimg.com/736x/10/e8/a5/10e8a5151af1e7292292bab31e868fca.jpg" alt="Party Cocktail Dress" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <button onclick="toggleWishlistFromCard('dress-005', this)" data-wishlist-id="dress-005" class="absolute top-3 right-3 bg-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-pink-600 hover:text-white transition"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex items-center gap-2 text-sm mb-2">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <span class="font-semibold">4.9</span>
+                            <span class="text-gray-500">(78)</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Party Cocktail Dress</h3>
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="text-2xl font-bold text-pink-600">₱249</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <button onclick="showNotification('Product details coming soon!', 'info')" class="border-2 border-gray-300 text-gray-700 py-2 rounded-lg hover:border-pink-600 hover:text-pink-600 transition font-semibold">View Details</button>
+                            <button onclick="addToCartFromCard('dress-005')" data-product-id="dress-005" class="bg-pink-600 text-white py-2 rounded-lg hover:bg-pink-700 transition font-semibold">Add to Bag</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 6 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-2xl transition-shadow duration-300">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1560243563-062bfc001d68?w=500&h=600&fit=crop" alt="Office Professional Dress" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <button onclick="toggleWishlistFromCard('dress-006', this)" data-wishlist-id="dress-006" class="absolute top-3 right-3 bg-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-pink-600 hover:text-white transition"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex items-center gap-2 text-sm mb-2">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <span class="font-semibold">4.5</span>
+                            <span class="text-gray-500">(92)</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Office Professional Dress</h3>
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="text-2xl font-bold text-pink-600">₱179</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <button onclick="showNotification('Product details coming soon!', 'info')" class="border-2 border-gray-300 text-gray-700 py-2 rounded-lg hover:border-pink-600 hover:text-pink-600 transition font-semibold">View Details</button>
+                            <button onclick="addToCartFromCard('dress-006')" data-product-id="dress-006" class="bg-pink-600 text-white py-2 rounded-lg hover:bg-pink-700 transition font-semibold">Add to Bag</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h4 class="text-xl font-bold mb-4">About Pink Lips</h4>
+                    <p class="text-gray-400">Empowering women through fashion with elegant dresses that celebrate femininity and style.</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-pink-500 transition">About Us</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-pink-500 transition">Contact</a></li>
+                        <li><a href="redeem.html" class="text-gray-400 hover:text-pink-500 transition">Redeem Code</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-500 transition">Size Guide</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-500 transition">Shipping Info</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Follow Us</h4>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-600 transition"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-600 transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-600 transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-600 transition"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 Pink Lips. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/cart.js"></script>
+    <script src="js/wishlist.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

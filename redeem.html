@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redeem - Pink Lips</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pink: {
+                            500: '#ec4899',
+                            600: '#db2777',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-pink-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-2 cursor-pointer" onclick="window.location.href='index.html'">
+                    <i class="fas fa-headphones text-gray-600 text-xl"></i>
+                    <span class="text-xl font-bold">Pink <span class="text-pink-600">Lips</span></span>
+                </div>
+                <ul class="hidden md:flex items-center space-x-8">
+                    <li><a href="index.html" class="text-gray-600 hover:text-pink-600 transition">Home</a></li>
+                    <li><a href="dresses.html" class="text-gray-600 hover:text-pink-600 transition">Dresses</a></li>
+                    <li><a href="categories.html" class="text-gray-600 hover:text-pink-600 transition">Categories</a></li>
+                    <li><a href="lookbook.html" class="text-gray-600 hover:text-pink-600 transition">Lookbook</a></li>
+                    <li><a href="redeem.html" class="text-pink-600 font-medium border-b-2 border-pink-600 pb-1">Redeem</a></li>
+                    <li><a href="about.html" class="text-gray-600 hover:text-pink-600 transition">About</a></li>
+                    <li><a href="contact.html" class="text-gray-600 hover:text-pink-600 transition">Contact</a></li>
+                </ul>
+                <div class="flex items-center space-x-4">
+                    <button class="text-gray-600 hover:text-pink-600 transition"><i class="fas fa-search"></i></button>
+                    <button onclick="window.location.href='cart.html'" class="text-gray-600 hover:text-pink-600 transition"><i class="fas fa-shopping-bag"></i></button>
+                    <button class="text-gray-600 hover:text-pink-600 transition" onclick="window.location.href='login.html'"><i class="fas fa-user"></i></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bg-gradient-to-r from-pink-600 to-purple-600 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <i class="fas fa-gift text-6xl mb-4"></i>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Redeem Your Code</h1>
+            <p class="text-xl text-pink-100">Enter your promo code or gift card to unlock exclusive discounts and special offers!</p>
+        </div>
+    </section>
+
+    <!-- Redeem Section -->
+    <section class="py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Redeem Code Card -->
+            <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12 mb-12">
+                <div class="text-center mb-8">
+                    <div class="inline-flex items-center justify-center w-20 h-20 bg-pink-100 rounded-full mb-4">
+                        <i class="fas fa-ticket-alt text-3xl text-pink-600"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-2">Enter Your Code</h2>
+                    <p class="text-gray-600">Have a promo code or gift card? Enter it below to apply your discount.</p>
+                </div>
+
+                <form class="space-y-6" id="redeemForm">
+                    <div>
+                        <label for="redeem-code" class="block text-sm font-semibold text-gray-700 mb-2">Promo Code / Gift Card Number</label>
+                        <div class="flex gap-3">
+                            <input 
+                                type="text" 
+                                id="redeem-code" 
+                                class="flex-1 px-6 py-4 border-2 border-gray-300 rounded-lg focus:border-pink-600 focus:outline-none text-lg font-mono uppercase" 
+                                placeholder="ENTER-YOUR-CODE"
+                                required
+                            >
+                            <button type="submit" class="bg-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-pink-700 transition whitespace-nowrap">
+                                <i class="fas fa-check mr-2"></i>Apply Code
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="message-container" class="hidden">
+                        <!-- Success/Error messages will appear here -->
+                    </div>
+                </form>
+
+                <div class="mt-8 pt-8 border-t border-gray-200">
+                    <h3 class="text-sm font-semibold text-gray-700 mb-3">Where to find your code:</h3>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check text-pink-600 mt-1"></i>
+                            <span>Check your email inbox for promotional codes</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check text-pink-600 mt-1"></i>
+                            <span>Look at the back of your physical gift card</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check text-pink-600 mt-1"></i>
+                            <span>Check your social media messages for special offers</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Available Offers Section -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Current Promotions</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Offer Card 1 -->
+                    <div class="bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl p-6 text-white shadow-lg">
+                        <div class="flex items-start justify-between mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold mb-1">20% OFF</h3>
+                                <p class="text-pink-100">First Time Customers</p>
+                            </div>
+                            <i class="fas fa-tag text-3xl opacity-50"></i>
+                        </div>
+                        <div class="bg-white bg-opacity-20 rounded-lg px-4 py-3 mb-4">
+                            <p class="text-xs font-semibold mb-1">USE CODE:</p>
+                            <p class="text-xl font-mono font-bold">WELCOME20</p>
+                        </div>
+                        <p class="text-sm text-pink-100">Valid on orders over $100</p>
+                    </div>
+
+                    <!-- Offer Card 2 -->
+                    <div class="bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl p-6 text-white shadow-lg">
+                        <div class="flex items-start justify-between mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold mb-1">FREE SHIPPING</h3>
+                                <p class="text-purple-100">On All Orders</p>
+                            </div>
+                            <i class="fas fa-shipping-fast text-3xl opacity-50"></i>
+                        </div>
+                        <div class="bg-white bg-opacity-20 rounded-lg px-4 py-3 mb-4">
+                            <p class="text-xs font-semibold mb-1">USE CODE:</p>
+                            <p class="text-xl font-mono font-bold">FREESHIP</p>
+                        </div>
+                        <p class="text-sm text-purple-100">No minimum purchase required</p>
+                    </div>
+
+                    <!-- Offer Card 3 -->
+                    <div class="bg-gradient-to-br from-rose-500 to-rose-600 rounded-xl p-6 text-white shadow-lg">
+                        <div class="flex items-start justify-between mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold mb-1">BUY 2 GET 1</h3>
+                                <p class="text-rose-100">Summer Collection</p>
+                            </div>
+                            <i class="fas fa-gift text-3xl opacity-50"></i>
+                        </div>
+                        <div class="bg-white bg-opacity-20 rounded-lg px-4 py-3 mb-4">
+                            <p class="text-xs font-semibold mb-1">USE CODE:</p>
+                            <p class="text-xl font-mono font-bold">SUMMER3</p>
+                        </div>
+                        <p class="text-sm text-rose-100">Add 3 items to cart, pay for 2</p>
+                    </div>
+
+                    <!-- Offer Card 4 -->
+                    <div class="bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-xl p-6 text-white shadow-lg">
+                        <div class="flex items-start justify-between mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold mb-1">15% OFF</h3>
+                                <p class="text-indigo-100">Birthday Special</p>
+                            </div>
+                            <i class="fas fa-birthday-cake text-3xl opacity-50"></i>
+                        </div>
+                        <div class="bg-white bg-opacity-20 rounded-lg px-4 py-3 mb-4">
+                            <p class="text-xs font-semibold mb-1">USE CODE:</p>
+                            <p class="text-xl font-mono font-bold">BDAY15</p>
+                        </div>
+                        <p class="text-sm text-indigo-100">Valid during your birth month</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gift Card Purchase CTA -->
+            <div class="bg-gradient-to-r from-pink-50 to-purple-50 rounded-2xl p-8 md:p-12 text-center">
+                <i class="fas fa-credit-card text-5xl text-pink-600 mb-4"></i>
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Looking for a Gift Card?</h2>
+                <p class="text-gray-600 mb-6 max-w-2xl mx-auto">Give the gift of style! Purchase a Pink Lips gift card and let your loved ones choose their perfect dress.</p>
+                <button class="bg-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-pink-700 transition inline-flex items-center gap-2">
+                    <i class="fas fa-shopping-cart"></i>
+                    Purchase Gift Card
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <div class="border-2 border-gray-200 rounded-lg p-6 hover:border-pink-600 transition">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2 flex items-center gap-2">
+                        <i class="fas fa-question-circle text-pink-600"></i>
+                        Can I use multiple promo codes?
+                    </h3>
+                    <p class="text-gray-600 ml-7">Only one promo code can be applied per order. However, some promotions may be combined with gift cards.</p>
+                </div>
+                <div class="border-2 border-gray-200 rounded-lg p-6 hover:border-pink-600 transition">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2 flex items-center gap-2">
+                        <i class="fas fa-question-circle text-pink-600"></i>
+                        Do gift cards expire?
+                    </h3>
+                    <p class="text-gray-600 ml-7">No! Pink Lips gift cards never expire and can be used at any time for any purchase.</p>
+                </div>
+                <div class="border-2 border-gray-200 rounded-lg p-6 hover:border-pink-600 transition">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2 flex items-center gap-2">
+                        <i class="fas fa-question-circle text-pink-600"></i>
+                        What if my code doesn't work?
+                    </h3>
+                    <p class="text-gray-600 ml-7">Please check that the code is entered correctly (case-sensitive) and hasn't expired. Contact our customer service for assistance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h4 class="text-xl font-bold mb-4">About Pink Lips</h4>
+                    <p class="text-gray-400">Empowering women through fashion with elegant dresses that celebrate femininity and style.</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-pink-500 transition">About Us</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-pink-500 transition">Contact</a></li>
+                        <li><a href="redeem.html" class="text-gray-400 hover:text-pink-500 transition">Redeem Code</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-500 transition">Size Guide</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-500 transition">Shipping Info</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Follow Us</h4>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-600 transition"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-600 transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-600 transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-600 transition"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 Pink Lips. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/cart.js"></script>
+    <script src="js/wishlist.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/redeem.js"></script>
+</body>
+</html>
+
