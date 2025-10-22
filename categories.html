@@ -26,9 +26,12 @@
     <nav class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
-                <div class="flex items-center gap-2 cursor-pointer" onclick="window.location.href='index.html'">
+                <div class="flex items-center gap-3">
+                    <button class="md:hidden text-gray-600 hover:text-pink-600 transition" onclick="toggleMobileMenu()" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+                    <div class="flex items-center gap-2 cursor-pointer" onclick="window.location.href='index.html'">
                     <i class="fas fa-headphones text-gray-600 text-xl"></i>
                     <span class="text-xl font-bold">Pink <span class="text-pink-600">Lips</span></span>
+                    </div>
                 </div>
                 <ul class="hidden md:flex items-center space-x-8">
                     <li><a href="index.html" class="text-gray-600 hover:text-pink-600 transition">Home</a></li>
@@ -43,6 +46,17 @@
                     <button onclick="window.location.href='cart.html'" class="text-gray-600 hover:text-pink-600 transition"><i class="fas fa-shopping-bag"></i></button>
                     <button class="text-gray-600 hover:text-pink-600 transition" onclick="window.location.href='login.html'"><i class="fas fa-user"></i></button>
                 </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden border-t border-gray-100">
+            <div class="px-4 py-3 space-y-2">
+                <a href="index.html" class="block py-2 text-gray-700 hover:text-pink-600">Home</a>
+                <a href="dresses.html" class="block py-2 text-gray-700 hover:text-pink-600">Dresses</a>
+                <a href="categories.html" class="block py-2 text-pink-600 font-semibold">Categories</a>
+                <a href="redeem.html" class="block py-2 text-gray-700 hover:text-pink-600">Redeem</a>
+                <a href="about.html" class="block py-2 text-gray-700 hover:text-pink-600">About</a>
+                <a href="contact.html" class="block py-2 text-gray-700 hover:text-pink-600">Contact</a>
             </div>
         </div>
     </nav>
