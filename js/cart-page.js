@@ -24,28 +24,30 @@ function renderCartItems() {
         const itemTotal = parseFloat(item.price.replace(/[₱]/g, '')) * item.quantity;
         
         return `
-        <div class="flex gap-4 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition">
-            <input type="checkbox" 
-                   id="item-${item.id}" 
-                   ${isChecked ? 'checked' : ''} 
-                   onchange="toggleItemSelection('${item.id}')"
-                   class="w-5 h-5 text-pink-600 rounded focus:ring-pink-500 cursor-pointer mt-2">
-            <img src="${item.image}" alt="${item.name}" class="w-24 h-24 object-cover rounded-lg">
-            <div class="flex-1">
-                <h3 class="font-bold text-lg text-gray-900 mb-1">${item.name}</h3>
-                <p class="text-pink-600 font-bold text-xl mb-3">${item.price}</p>
-                <div class="flex items-center gap-3">
-                    <button onclick="decreaseQuantity('${item.id}')" class="w-8 h-8 bg-white border-2 border-gray-300 rounded-lg hover:border-pink-600 hover:text-pink-600 transition flex items-center justify-center font-bold">
-                        <i class="fas fa-minus text-sm"></i>
-                    </button>
-                    <span class="font-bold text-lg w-8 text-center">${item.quantity}</span>
-                    <button onclick="increaseQuantity('${item.id}')" class="w-8 h-8 bg-white border-2 border-gray-300 rounded-lg hover:border-pink-600 hover:text-pink-600 transition flex items-center justify-center font-bold">
-                        <i class="fas fa-plus text-sm"></i>
-                    </button>
+        <div class="flex flex-col sm:flex-row gap-4 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition">
+            <div class="flex gap-4 flex-1">
+                <input type="checkbox" 
+                       id="item-${item.id}" 
+                       ${isChecked ? 'checked' : ''} 
+                       onchange="toggleItemSelection('${item.id}')"
+                       class="w-5 h-5 text-pink-600 rounded focus:ring-pink-500 cursor-pointer mt-2">
+                <img src="${item.image}" alt="${item.name}" class="w-20 h-20 sm:w-24 sm:h-24 object-cover rounded-lg">
+                <div class="flex-1 min-w-0">
+                    <h3 class="font-bold text-lg text-gray-900 mb-1 truncate">${item.name}</h3>
+                    <p class="text-pink-600 font-bold text-xl mb-3">${item.price}</p>
+                    <div class="flex items-center gap-3">
+                        <button onclick="decreaseQuantity('${item.id}')" class="w-8 h-8 bg-white border-2 border-gray-300 rounded-lg hover:border-pink-600 hover:text-pink-600 transition flex items-center justify-center font-bold">
+                            <i class="fas fa-minus text-sm"></i>
+                        </button>
+                        <span class="font-bold text-lg w-8 text-center">${item.quantity}</span>
+                        <button onclick="increaseQuantity('${item.id}')" class="w-8 h-8 bg-white border-2 border-gray-300 rounded-lg hover:border-pink-600 hover:text-pink-600 transition flex items-center justify-center font-bold">
+                            <i class="fas fa-plus text-sm"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
-            <div class="flex flex-col justify-between items-end">
-                <button onclick="removeFromCart('${item.id}')" class="text-red-500 hover:text-red-700 transition">
+            <div class="flex justify-between sm:flex-col sm:justify-between sm:items-end gap-2">
+                <button onclick="removeFromCart('${item.id}')" class="text-red-500 hover:text-red-700 transition p-2">
                     <i class="fas fa-trash"></i>
                 </button>
                 <p class="font-bold text-xl text-gray-900">
@@ -262,4 +264,3 @@ window.applyPromoCode = applyPromoCode;
 window.proceedToCheckout = proceedToCheckout;
 window.toggleItemSelection = toggleItemSelection;
 window.toggleSelectAll = toggleSelectAll;
-
